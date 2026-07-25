@@ -1,12 +1,12 @@
 "use client";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { ProjectImage } from "@/app/components/ProjectImage";
 
 export const metadata = {
-  title: "Ordnance Survey Cloud — Precision mapping at the speed of logistics",
+  title: "Ordnance Survey Cloud — Geospatial infrastructure for the mapped world",
   description:
-    "High-precision vector and raster tiles for logistics infrastructure. 99.9% uptime SLA.",
+    "Serve authoritative location data at national scale. Ordnance Survey Cloud gives engineering teams tiles, terrain, and place data through one resilient API.",
 };
 
 const fadeUp = {
@@ -48,15 +48,13 @@ const features = [
 ];
 
 export default function Home() {
-  const shouldReduceMotion = useReducedMotion();
-
   return (
     <main id="top">
       <section className="section">
         <div className="container">
           <motion.div
-            initial={shouldReduceMotion ? false : "hidden"}
-            animate={shouldReduceMotion ? false : "show"}
+            initial="hidden"
+            animate="show"
             variants={fadeUp}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -79,11 +77,14 @@ export default function Home() {
           </motion.div>
           <motion.div
             className="hero-media"
-            initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98 }}
-            animate={shouldReduceMotion ? false : { opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
-            <ProjectImage id="hero" />
+            <ProjectImage
+              src="/images/hero-map.jpg"
+              alt="National basemap rendered as vector tiles across a coastal region"
+            />
           </motion.div>
         </div>
       </section>
@@ -93,10 +94,10 @@ export default function Home() {
           <dl className="data-strip">
             {dataStrip.map((item) => (
               <motion.div
-                key={item.value}
+                key={item.label}
                 className="data-strip__item"
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
-                whileInView={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
@@ -121,17 +122,20 @@ export default function Home() {
                 className={`feature-row flex flex-col md:flex-row ${
                   feature.reverse ? "md:flex-row-reverse" : ""
                 } items-center gap-8`}
-                initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-                whileInView={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{
                   duration: 0.5,
                   ease: [0.16, 1, 0.3, 1],
-                  delay: shouldReduceMotion ? 0 : index * 0.06,
+                  delay: index * 0.06,
                 }}
               >
                 <div className="feature-row__media w-full md:w-1/2">
-                  <ProjectImage id={feature.id as any} className="w-full" />
+                  <ProjectImage
+                    id={feature.id}
+                    alt={feature.title}
+                  />
                 </div>
                 <div className="feature-row__content w-full md:w-1/2">
                   <p className="label">{feature.eyebrow}</p>
@@ -149,8 +153,8 @@ export default function Home() {
         <div className="container">
           <motion.figure
             className="quote"
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-            whileInView={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -171,8 +175,8 @@ export default function Home() {
       <section className="section section--cta" aria-label="Get started">
         <div className="container">
           <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
-            whileInView={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
