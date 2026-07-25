@@ -57,7 +57,7 @@ export default function Footer() {
           <p className="text-[var(--color-fog)] text-[var(--text-body-md)] m-0">
             &copy; 2026 Ordnance Survey Cloud. All rights reserved.
           </p>
-          <span className="font-[var(--font-mono)] text-[var(--text-mono)] text-[var(--color-fog)]">
+          <span className="mono font-[var(--font-mono)] text-[var(--text-mono)] text-[var(--color-fog)]">
             2026-07-25 14:42:01 UTC
           </span>
         </div>
