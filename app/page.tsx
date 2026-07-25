@@ -39,7 +39,7 @@ const features = [
     dataPoint: "RESTful API with comprehensive OpenAPI documentation.",
     reverse: true,
   },
-];
+] as const;
 
 export default function Home() {
   return (
