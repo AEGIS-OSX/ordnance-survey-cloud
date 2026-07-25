@@ -3,12 +3,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ProjectImage } from "@/app/components/ProjectImage";
 
-export const metadata = {
-  title: "Ordnance Survey Cloud — Geospatial infrastructure for the mapped world",
-  description:
-    "Serve authoritative location data at national scale. Ordnance Survey Cloud gives engineering teams tiles, terrain, and place data through one resilient API.",
-};
-
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0 },
@@ -22,7 +16,7 @@ const dataStrip = [
 
 const features = [
   {
-    id: "feature-1",
+    id: "feature_1",
     eyebrow: "Infrastructure Reliability",
     title: "Built for logistics uptime.",
     body: "Routing engines and driver applications require constant tile availability. Ordnance Survey Cloud provides a redundant infrastructure layer designed to eliminate single points of failure in the mapping stack.",
@@ -30,7 +24,7 @@ const features = [
     reverse: true,
   },
   {
-    id: "feature-2",
+    id: "feature_2",
     eyebrow: "Cartographic Precision",
     title: "Accuracy at every zoom level.",
     body: "Derived from centuries of cartographic heritage, our tiles maintain geometric integrity from global overviews to street-level detail. Optimized for high-density urban routing and complex terrain navigation.",
@@ -38,14 +32,14 @@ const features = [
     reverse: false,
   },
   {
-    id: "feature-3",
+    id: "feature_3",
     eyebrow: "Integration Readiness",
     title: "Compatible with existing stacks.",
     body: "Deploy via standard XYZ tile protocols. Native support for Leaflet, Mapbox GL, and OpenLayers ensures minimal migration overhead for established logistics platforms.",
     dataPoint: "RESTful API with comprehensive OpenAPI documentation.",
     reverse: true,
   },
-];
+] as const;
 
 export default function Home() {
   return (
@@ -81,10 +75,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
-            <ProjectImage
-              src="/images/hero-map.jpg"
-              alt="National basemap rendered as vector tiles across a coastal region"
-            />
+            <ProjectImage id="hero" />
           </motion.div>
         </div>
       </section>
@@ -132,10 +123,7 @@ export default function Home() {
                 }}
               >
                 <div className="feature-row__media w-full md:w-1/2">
-                  <ProjectImage
-                    id={feature.id}
-                    alt={feature.title}
-                  />
+                  <ProjectImage id={feature.id} />
                 </div>
                 <div className="feature-row__content w-full md:w-1/2">
                   <p className="label">{feature.eyebrow}</p>
