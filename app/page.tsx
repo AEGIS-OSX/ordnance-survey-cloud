@@ -15,29 +15,9 @@ const fadeUp = {
 };
 
 const dataStrip = [
-  { value: "580M+", label: "Geographic features served" },
-  { value: "99.98%", label: "API uptime, trailing 12 months" },
-  { value: "7cm", label: "Positional accuracy at survey grade" },
-  { value: "46ms", label: "Median tile response, p50" },
-];
-
-const features = [
-  {
-    title: "Authoritative basemaps",
-    body: "Vector and raster tiles rebuilt from the national survey on a continuous change-only pipeline. No stale geometry, no reprojection guesswork.",
-  },
-  {
-    title: "Terrain and elevation",
-    body: "Query height, slope, and viewshed against a 1m digital surface model. Streamed as tiles or resolved server-side for analysis workloads.",
-  },
-  {
-    title: "Place and address graph",
-    body: "Every building, street, and boundary linked by a stable identifier. Resolve an address to a footprint and its neighbours in a single call.",
-  },
-  {
-    title: "Deterministic delivery",
-    body: "Edge-cached across regions with signed, versioned responses. What you tested in staging is byte-for-byte what ships to production.",
-  },
+  { value: "99.9%", label: "Contractual uptime guarantees with penalty credits." },
+  { value: "Sub-50ms", label: "Global edge delivery via distributed CDN nodes." },
+  { value: "ISO 27001", label: "Institutional-grade security and data governance." },
 ];
 
 export default function Home() {
@@ -53,19 +33,17 @@ export default function Home() {
           >
             <p className="label">Geospatial cloud infrastructure</p>
             <h1 className="display">
-              The mapped world, served as an API your team can build on.
+              Precision mapping at the speed of logistics
             </h1>
             <p className="lead">
-              Ordnance Survey Cloud puts authoritative tiles, terrain, and place
-              data behind one resilient endpoint. Ship location features without
-              standing up a survey division.
+              High-precision vector and raster tiles for logistics infrastructure. 99.9% uptime SLA.
             </p>
             <div className="hero-actions">
-              <Link href="/start" className="btn-primary">
-                Get an API key
+              <Link href="/contact" className="btn-primary">
+                Request API access
               </Link>
-              <Link href="/docs" className="btn-secondary">
-                Read the docs
+              <Link href="/pricing" className="btn-secondary">
+                View pricing
               </Link>
             </div>
           </motion.div>
@@ -109,24 +87,60 @@ export default function Home() {
           <h2 className="display display--sm">
             One platform for every location question.
           </h2>
-          <div className="feature-grid">
-            {features.map((feature, index) => (
-              <motion.article
-                key={feature.title}
-                className="feature-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.16, 1, 0.3, 1],
-                  delay: index * 0.06,
-                }}
-              >
-                <h3 className="feature-card__title">{feature.title}</h3>
-                <p className="feature-card__body">{feature.body}</p>
-              </motion.article>
-            ))}
+          <div className="feature-list">
+            {/* Feature 01: Infrastructure Reliability */}
+            <motion.article
+              className="feature-row"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0 }}
+            >
+              <div className="feature-row__text">
+                <h3 className="feature-row__title">Built for logistics uptime.</h3>
+                <p className="feature-row__body">Routing engines and driver applications require constant tile availability. Ordnance Survey Cloud provides a redundant infrastructure layer designed to eliminate single points of failure in the mapping stack.</p>
+                <p className="feature-row__data mono">100% historical uptime across all production clusters in Q2 2026.</p>
+              </div>
+              <div className="feature-row__media">
+                <ProjectImage id="feature-infrastructure" alt="Infrastructure Reliability" />
+              </div>
+            </motion.article>
+
+            {/* Feature 02: Cartographic Precision — image LEFT, text RIGHT */}
+            <motion.article
+              className="feature-row feature-row--reverse"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.06 }}
+            >
+              <div className="feature-row__media">
+                <ProjectImage id="feature-cartographic" alt="Cartographic Precision" />
+              </div>
+              <div className="feature-row__text">
+                <h3 className="feature-row__title">Accuracy at every zoom level.</h3>
+                <p className="feature-row__body">Derived from centuries of cartographic heritage, our tiles maintain geometric integrity from global overviews to street-level detail. Optimized for high-density urban routing and complex terrain navigation.</p>
+                <p className="feature-row__data mono">Weekly global dataset refreshes.</p>
+              </div>
+            </motion.article>
+
+            {/* Feature 03: Integration Readiness */}
+            <motion.article
+              className="feature-row"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
+            >
+              <div className="feature-row__text">
+                <h3 className="feature-row__title">Compatible with existing stacks.</h3>
+                <p className="feature-row__body">Deploy via standard XYZ tile protocols. Native support for Leaflet, Mapbox GL, and OpenLayers ensures minimal migration overhead for established logistics platforms.</p>
+                <p className="feature-row__data mono">RESTful API with comprehensive OpenAPI documentation.</p>
+              </div>
+              <div className="feature-row__media">
+                <ProjectImage id="feature-integration" alt="Integration Readiness" />
+              </div>
+            </motion.article>
           </div>
         </div>
       </section>
@@ -141,14 +155,11 @@ export default function Home() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <blockquote className="quote__text">
-              We replaced three internal mapping services with one Ordnance
-              Survey Cloud key. Our location stack went from a standing team to a
-              line in the billing report.
+              Ordnance Survey Cloud provides the technical stability required for our fleet&apos;s routing operations. The latency benchmarks are consistent across all territories.
             </blockquote>
             <figcaption className="quote__cite">
-              <span className="quote__name">Priya Nandakumar</span>
               <span className="mono quote__role">
-                Principal Engineer, Meridian Logistics
+                Network Infrastructure Lead, Yodel
               </span>
             </figcaption>
           </motion.figure>
