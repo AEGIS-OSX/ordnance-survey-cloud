@@ -1,37 +1,37 @@
 {
   "logo": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946704366-logo.png",
+    "alt": "A minimalist, flat vector logo mark for Ordnance Survey Cloud. It features a Survey Orange (#E8622A) contour-inspired geometric icon paired with 'OS CLOUD' in Paper (#F4F5F7) typography, set against a",
     "width": 1024,
     "height": 1024
   },
   "hero": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946570463-hero.png",
+    "alt": "A high-precision cartographic hero visual featuring dense contour lines and technical grids on a cool paper surface, accented by a single survey orange rule. It establishes a mood of institutional rel",
     "width": 1920,
     "height": 1080
   },
   "feature_1": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946580722-feature_1.png",
+    "alt": "A top-down cartographic study featuring a physical map with fine-lined contour patterns and a Survey Orange technical instrument. The clinical 5600K lighting and left-aligned composition reinforce the",
     "width": 800,
     "height": 600
   },
   "feature_2": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946575558-feature_2.png",
+    "alt": "A high-precision overhead shot of a cartographic survey map with dense ink contour lines and a Survey Orange technical tool, emphasizing the organization's heritage of accuracy and infrastructure.",
     "width": 800,
     "height": 600
   },
   "feature_3": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946581505-feature_3.png",
+    "alt": "A top-down, clinical shot of a physical topographic map with fine ink contour lines and a Survey Orange drafting pen, emphasizing cartographic precision and infrastructure reliability.",
     "width": 800,
     "height": 600
   },
   "social_proof": {
-    "url": "",
-    "alt": "",
+    "url": "https://zkvkbpxrxnfynqqeytke.supabase.co/storage/v1/object/public/marketing-assets/ordnance-survey-cloud/cleo/1784946840345-social_proof.png",
+    "alt": "A top-down cartographic map pinned to a slate surface, featuring fine-line contours and a single Survey Orange logistics route. The image establishes a mood of technical precision and institutional au",
     "width": 1200,
     "height": 800
   }
