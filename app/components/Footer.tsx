@@ -14,8 +14,8 @@ const columns = [
     heading: "Governance",
     links: [
       { label: "Security", href: "/security" },
-      { label: "Privacy", href: "/privacy" },
-      { label: "Terms", href: "/terms" },
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
     ],
   },
   {
@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     <footer role="contentinfo" className="bg-[var(--color-ink)]">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--space-12)] pt-[var(--space-16)]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[var(--space-8)] md:gap-[var(--space-12)] pt-[var(--space-16)]">
           {columns.map((col) => (
             <div key={col.heading}>
               <h3 className="text-[var(--color-fog)] text-[var(--text-label)] font-medium tracking-[0.04em] uppercase mb-[var(--space-4)]">
@@ -53,11 +53,11 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-[var(--space-3)] py-[var(--space-6)] border-t border-[var(--color-grid)]">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-[var(--space-3)] md:gap-0 py-[var(--space-6)] border-t border-[var(--color-grid)]">
           <p className="text-[var(--color-fog)] text-[var(--text-body-md)] m-0">
             &copy; 2026 Ordnance Survey Cloud. All rights reserved.
           </p>
-          <span className="mono text-[var(--color-fog)]">
+          <span className="font-[var(--font-mono)] text-[var(--text-mono)] text-[var(--color-fog)]">
             2026-07-25 14:42:01 UTC
           </span>
         </div>
